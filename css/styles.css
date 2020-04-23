@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* letra para la pagina*/
+    font-family: 'Baloo Bhai 2', cursive;
+}
+/*********************
+*****Formateo li.item a.menu-link *****
+***********************/
+.item{
+    list-style: none;
+}
+.menu-link{
+    text-decoration: none;
+}
+
