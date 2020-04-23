@@ -8,10 +8,10 @@
 /*********************
 *****Formateo li.item a.menu-link *****
 ***********************/
-.item{
+li{
     list-style: none;
 }
-.menu-link{
+a{
     text-decoration: none;
 }
 
