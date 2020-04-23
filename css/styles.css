@@ -21,11 +21,38 @@ a{
 .cabecera{ /*header*/
     display: flex;
     flex-direction: column;
-    background: rgba(245, 220, 107, 0.212);
+    background: rgba(245, 220, 107, 0.623);
 }
 .contenedor-menu{/*nav*/
     display: flex;
     flex-direction: column;
+}
+.menu{ /*ul.menu que se aplica a 3 cajas*/
+    display: flex;
+    flex-direction: column;
+
+}
+/*menu-link a*/
+.menu-link{
+    color:rgba(8, 8, 8, 0.616);
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*item li*/
+.item{
+    height: 40px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.384);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item:hover{
+    background: rgba(221, 187, 94, 0.658);
 }
 @media screen and (min-width: 420px) {
     .contenedor-menu{/*nav*/
@@ -33,4 +60,5 @@ a{
         justify-content: space-between;
     }
 }
+
 
