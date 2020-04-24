@@ -211,7 +211,6 @@ input[type="text"]{
 *****Main*****
 ***********************/
 .content{
-    padding: 5px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,15 +230,19 @@ input[type="text"]{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
     justify-content: center;
-    
+
 }
+.info-item:first-child{
+    padding: 10px;
+     
+ }
 
 @media screen and (min-width: 720px) {
   .info-page{
       flex-direction: row;
-
+      width: 90vw;
+      margin: 10px;
   }
   .info-item{
     display: flex;
@@ -247,12 +250,9 @@ input[type="text"]{
     justify-content: center;
 }
   .info-item:first-child{
-     flex:1 0 70%;
-      
+     flex:1 0 60%;
   }
-  .info-item:last-child{
-    
-  }
+
 }
 
 
