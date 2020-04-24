@@ -22,16 +22,34 @@ a{
     display: flex;
     flex-direction: column;
     background: rgba(245, 220, 107, 0.623);
-}
+}/*dara propiedades al .contenedor-menu y al .logo*/
+
 .contenedor-menu{/*nav*/
     display: flex;
     flex-direction: column;
+}/*tiene propiedades del padre y da propiedades a las 3 cajas ul.menu*/
+
+/*segundo hijo flex de cabecera*/
+.logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(236, 236, 235, 0.315);
+    height: 15vh;   
 }
+
 .menu{ /*ul.menu que se aplica a 3 cajas*/
     display: flex;
     flex-direction: column;
 
+}/*ojo que se usa column para trabajar first movil responsive-web-design*/
+
+/*Flexbox al primer ul menu:nthchild(1)*/
+.menu:nth-child(1),.menu:nth-child(3){
+    flex-direction: row;
+    justify-content: space-around;
 }
+
 /*menu-link a*/
 .menu-link{
     color:rgba(8, 8, 8, 0.616);
@@ -41,7 +59,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}/*Enlace de menu todos estilos*/
 
 /*item li*/
 .item{
@@ -50,14 +68,53 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all ease-in-out .2s;
 }
-.item:hover{
+.menu:nth-child(2) .item:hover{
     background: rgba(221, 187, 94, 0.658);
+    transition: all ease-in-out .2s;
 }
-@media screen and (min-width: 420px) {
+/*buscador menu*/
+input[type="text"]{
+    border-radius: 10px;
+    padding: 5px;
+    border:none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.logo-text{
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+}
+@media screen and (min-width: 720px) {
     .contenedor-menu{/*nav*/
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
+    }
+    .menu{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .menu:nth-child(1){
+        flex-grow: 1;
+    }
+    .menu:nth-child(2){
+        flex-grow: 2;
+        justify-content: center;
+    }
+    .menu:nth-child(3){
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .menu:nth-child(3) .item{
+        margin-left: 10px;
+
+    }
+    .menu:nth-child(2) .item{
+        flex: 0 1 calc(20% - 1rem);
+    }
+    .logo-text{
+        font-size: 50px;
     }
 }
 
