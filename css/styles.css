@@ -6,7 +6,7 @@
     font-family: 'Baloo Bhai 2', cursive;
 }
 /*********************
-*****Formateo li.item a.menu-link *****
+*****Formateo li.item a.menu-link y botones*****
 ***********************/
 li{
     list-style: none;
@@ -14,7 +14,18 @@ li{
 a{
     text-decoration: none;
 }
-
+/*Estilos generales para cualquier boton en la pagina*/
+.btn{
+    display: inline-block;
+    border:solid 1px #fff;
+    padding: 5px;
+    transition: all ease .6s;
+    border-radius: 10px;
+}
+.btn:hover{
+    transition: all ease .6s;
+    background: rgba(180, 176, 176, 0.534);
+}
 /*********************
 *****Header*****
 ***********************/
@@ -86,6 +97,8 @@ input[type="text"]{
     font-family: 'Satisfy', cursive;
     font-size: 40px;
 }
+
+/*Vista Escritorio Header*/
 @media screen and (min-width: 720px) {
     .contenedor-menu{/*nav*/
         flex-direction: row;
@@ -118,7 +131,80 @@ input[type="text"]{
     }
 }
 
-/*************************
+/****************************
 *****Iniciando el Banner*****
-**************************/
+*****************************/
+.contenedor{
+    background: rgba(231, 229, 229, 0.452);
+    display: flex;
+    height: 42vh;
+    justify-content: center;
+    align-items: center;
+}
+/*imagen del banner y conedora de  los otros elementos*/
+.banner{
+    background: linear-gradient(to right, rgba(219, 204, 71, 0.411) 15%, rgba(235, 232, 232, 0.753)), url(../img/portada-movil.jpg);
+    height: 100%;
+    width: 100vw;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+/*contenedor de la descripcion del banner*/
+.banner-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*h2 titulo de banner*/
+.banner-title{
+    text-align: center;
+    width: 80%;
+    font-family: 'Bree Serif', cursive;
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-shadow: 6px 4px 5px rgba(42, 121, 29, 0.746);
+}
+/*modificando estilos de la clase btn y adaptando para el banner*/
+.btn-banner{
+
+    border: solid 1px rgba(10, 99, 2, 0.418);
+    border-top: solid 4px rgba(10, 99, 2, 0.418) ;
+    color: rgb(255, 255, 255);
+    font-weight:bold ;
+}
+
+/*Vista Escritorio Banner*/
+@media screen and (min-width: 720px) {
+  .contenedor{
+    height: 78.5vh;
+  }
+  .banner{
+    background: linear-gradient(to right, rgba(169, 226, 115, 0.74) 15%, rgba(170, 170, 167, 0.534)), url(../img/portada.jpg);
+    }
+    .banner-title{
+        font-size: 50px;
+    }
+    .btn-banner{
+        border-radius: 0px;
+        border: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        width: 170px;
+        text-align: center;
+
+    }
+    .btn-banner:hover{
+        background: none;
+        color: rgba(3, 68, 7, 0.705);
+        text-shadow: 6px 4px 5px rgba(26, 109, 11, 0.746);
+    }
+}
+
+
 
