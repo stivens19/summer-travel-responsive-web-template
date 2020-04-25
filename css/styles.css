@@ -315,6 +315,62 @@ input[type="text"]{
   }
 
 }
+/*-------------------------/
+--(Section Experience)---
+---------------------------*/
+
+.experience{
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+}
+.experience-description{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+.btn-exp{
+    border-radius: 5px;
+    border:none;
+    background: rgb(83, 121, 204);
+    color: #fff;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+    margin-top: 5px;
+}
+.box-button{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (min-width: 720px) {
+    .experience{
+        width: 90vw;
+        margin: 10px;
+    }
+  .experience-description{
+      flex-direction: row;
+      height: 40%;
+  }
+  .experience-content{
+    flex: 2 0 60%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-button{
+    flex: 1 0 40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+ .btn-exp{
+    width: 200px;
+ }
+}
 
 
 
